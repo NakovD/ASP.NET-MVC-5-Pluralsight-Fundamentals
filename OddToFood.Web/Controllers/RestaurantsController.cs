@@ -78,7 +78,15 @@ namespace OddToFood.Web.Controllers
             return View(restaurant);
         }
 
+        [HttpGet]
         public ActionResult Delete(int id)
+        {
+            var viewModel = db.GetRestaurantById(id);
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection form)
         {
             var isRestaurantDeleted = db.DeleteRestaurant(id);
             if (isRestaurantDeleted)
