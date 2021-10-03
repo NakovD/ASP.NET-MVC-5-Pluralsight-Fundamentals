@@ -71,6 +71,7 @@ namespace OddToFood.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                TempData["Message"] = "You successfully have saved the restaurant!";
                 db.ChangeRestaurantData(restaurant);
                 return RedirectToAction("Details", new { Id = restaurant.Id });
             }
