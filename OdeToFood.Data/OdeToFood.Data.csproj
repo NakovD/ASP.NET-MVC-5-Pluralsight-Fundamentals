@@ -103,7 +103,6 @@
   <ItemGroup>
     <Compile Include="Models\CuisineType.cs" />
     <Compile Include="Models\Restaurant.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\InMemoryRestaurantData.cs" />
     <Compile Include="Services\IRestaurantData.cs" />
     <Compile Include="Services\OdeToFoodDBContext.cs" />
@@ -112,6 +111,9 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
